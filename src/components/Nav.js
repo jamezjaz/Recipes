@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavStyles from '../styles/Nav.module.css';
+import logo from '../assets/logo.png';
 
 const Nav = () => (
   <nav className={NavStyles.nav}>
-    <h2 className="my-logo" style={{ color: 'white' }}>Catalogue Of Recipes</h2>
+    <h2
+      className="my-logo"
+      style={{ color: 'white' }}
+    >
+      <img src={logo} alt={logo} />
+      Catalogue Of Recipes
+    </h2>
     <ul className={NavStyles.navLinks}>
       <Link
         style={{
