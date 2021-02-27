@@ -1,10 +1,10 @@
 import '../styles/App.css';
-import FoodsList from '../container/FoodsList';
+import Routes from '../Routes';
 
 const App = () => (
   <div className="App">
     <h1>Catalogue Of Recipes</h1>
-    <FoodsList />
+    <Routes />
   </div>
 );
 
