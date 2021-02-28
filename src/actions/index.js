@@ -1,5 +1,9 @@
-// import axios from 'axios';
-import { FETCH_FOODS_REQUEST, FETCH_FOODS_SUCCESS, FETCH_FOODS_FAILURE } from './actionTypes';
+import {
+  FETCH_FOODS_REQUEST,
+  FETCH_FOODS_SUCCESS,
+  FETCH_FOODS_FAILURE,
+  CHANGE_FILTER,
+} from './actionTypes';
 
 export const foodRequest = () => ({
   type: FETCH_FOODS_REQUEST,
@@ -15,18 +19,7 @@ export const foodRequestFailure = error => ({
   payload: error,
 });
 
-// export const fetchFoods = () => dispatch => {
-//   const url = 'https://www.themealdb.com/api/json/v1/1/search.php?f=b';
-//   dispatch(foodRequest);
-//   axios.get(url)
-//     .then(response => {
-//       const foodRes = response.data;
-//       dispatch(foodRequestSuccess(foodRes));
-//       console.log(response);
-//       console.log(foodRes);
-//     })
-//     .catch(error => {
-//       const errorMsg = error.message;
-//       dispatch(foodRequestFailure(errorMsg));
-//     });
-// };
+export const foodFilterAction = category => ({
+  type: CHANGE_FILTER,
+  payload: category,
+});

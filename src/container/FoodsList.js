@@ -12,27 +12,27 @@ const FoodsList = props => {
   }, []);
   return (
     <div className={FoodsListStyles.foods}>
-      {/* <div> */}
       {foods.map(food => (
         <div
           key={food.idMeal}
           food={food}
         >
-          {food.idMeal}
-          <br />
-          {food.strMeal}
-          <br />
-          {food.strCategory}
-          <br />
-          {food.strArea}
-          <br />
-          {food.strInstructions}
-          <br />
-          <img src={food.strMealThumb} alt="mealLogo" />
-          <br />
+          <div className="row">
+            <div className="col-sm-12">{food.idMeal}</div>
+            <br />
+            <div className="col-sm-12">{food.strMeal}</div>
+            <br />
+            <div className="col-sm-12">{food.strCategory}</div>
+            <br />
+            <div className="col-sm-12">{food.strArea}</div>
+            <br />
+            {/* <div>{food.strInstructions}</div>
+            <br /> */}
+            <div className="col-sm-12"><img src={food.strMealThumb} alt="mealLogo" className="w-25" /></div>
+            <br />
+          </div>
         </div>
       ))}
-      {/* </div> */}
     </div>
   );
 };
@@ -49,7 +49,7 @@ FoodsList.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  foods: state.foods.meals,
+  foods: state.food.foods.meals,
 });
 
 const mapDispatchToProps = dispatch => ({
