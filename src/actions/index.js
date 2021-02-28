@@ -19,7 +19,7 @@ export const foodRequestFailure = error => ({
   payload: error,
 });
 
-export const foodFilterAction = category => ({
+export const foodFilterAction = strCategory => ({
   type: CHANGE_FILTER,
-  payload: category,
+  payload: strCategory,
 });
