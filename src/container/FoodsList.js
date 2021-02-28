@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import FoodsListStyles from '../styles/FoodsList.module.css';
 import fetchFoods from '../apiRequests/getRequest';
 
 const FoodsList = props => {
-  const { foods } = props;
+  const { foods, fetchedFoods } = props;
 
+  useEffect(() => {
+    fetchedFoods(foods);
+  }, []);
   return (
     <div className={FoodsListStyles.foods}>
       {/* <div> */}
@@ -42,6 +45,7 @@ FoodsList.propTypes = {
     area: PropTypes.string,
     instructions: PropTypes.string,
   })).isRequired,
+  fetchedFoods: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
