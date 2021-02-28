@@ -1,4 +1,3 @@
-
 import { CHANGE_FILTER } from '../actions/actionTypes';
 
 const filter = null;
