@@ -2,24 +2,30 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import FoodsListStyles from '../styles/FoodsList.module.css';
+import fetchFoods from '../apiRequests/getRequest';
 
 const FoodsList = props => {
   const { foods } = props;
+
   return (
     <div className={FoodsListStyles.foods}>
       {/* <div> */}
       {foods.map(food => (
         <div
-          key={food.id}
+          key={food.idMeal}
           food={food}
         >
-          {food.id}
+          {food.idMeal}
           <br />
-          {food.name}
+          {food.strMeal}
           <br />
-          {food.category}
+          {food.strCategory}
           <br />
-          {food.area}
+          {food.strArea}
+          <br />
+          {food.strInstructions}
+          <br />
+          <img src={food.strMealThumb} alt="mealLogo" />
           <br />
         </div>
       ))}
@@ -42,4 +48,8 @@ const mapStateToProps = state => ({
   foods: state.foods.meals,
 });
 
-export default connect(mapStateToProps, null)(FoodsList);
+const mapDispatchToProps = dispatch => ({
+  fetchedFoods: foods => dispatch(fetchFoods(foods)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FoodsList);
