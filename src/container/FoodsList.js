@@ -7,7 +7,7 @@ import FoodFilter from '../components/FoodFillter';
 import { foodFilterAction } from '../actions';
 
 const FoodsList = props => {
-  const { foods, fetchedFoods } = props;
+  const { foods, fetchedFoods, filtered } = props;
 
   const handleFilterChange = category => {
     const { filter } = props;
@@ -18,10 +18,13 @@ const FoodsList = props => {
     fetchedFoods(foods);
   }, []);
 
+  const filteredBooks = foods.filter(food => (
+    !!((filtered === null || filtered === food.strCategory))));
+
   return (
     <div className={FoodsListStyles.foods}>
       <FoodFilter handleFilter={handleFilterChange} foods={foods} />
-      {foods.map(food => (
+      {filteredBooks.map(food => (
         <div
           key={food.idMeal}
           food={food}
@@ -56,10 +59,16 @@ FoodsList.propTypes = {
   })).isRequired,
   fetchedFoods: PropTypes.func.isRequired,
   filter: PropTypes.func.isRequired,
+  filtered: PropTypes.string,
+};
+
+FoodsList.defaultProps = {
+  filtered: null,
 };
 
 const mapStateToProps = state => ({
   foods: state.food.foods.meals,
+  filtered: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({
