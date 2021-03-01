@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import recipeImg from '../assets/recipeImg.jpg';
+// import 'node_modules/video-react/dist/video-react.css';
+import { Player } from 'video-react';
 
 const FoodDetails = props => {
   const { foods } = props;
@@ -18,6 +19,7 @@ const FoodDetails = props => {
                 <th scope="col">Category</th>
                 <th scope="col">Area</th>
                 <th scope="col">Instructions</th>
+                <th scope="col">Video</th>
               </tr>
             </thead>
             <tbody>
@@ -29,6 +31,16 @@ const FoodDetails = props => {
                 <td>{food.strCategory}</td>
                 <td>{food.strArea}</td>
                 <td>{food.strInstructions}</td>
+                <td>
+                  <Player
+                    playsInline
+                    poster="/assets/poster.png"
+                    src={food.strYoutube}
+                    fluid={false}
+                    width={200}
+                    height={150}
+                  />
+                </td>
               </tr>
             </tbody>
           </table>

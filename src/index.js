@@ -4,6 +4,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/video-react/dist/video-react.css';
 import './styles/index.css';
 import App from './components/App';
 import rootReducer from './reducers';
