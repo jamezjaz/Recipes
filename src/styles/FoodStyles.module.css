@@ -1,0 +1,14 @@
+.img {
+  width: 25%;
+}
+
+.foodDetails {
+  /* display: flex; */
+}
+
+.link {
+  color: rgb(36, 5, 5);
+  font-size: 18px;
+  font-weight: bold;
+  margin: '0 0 0 10px';
+}

@@ -5,6 +5,7 @@ import FoodsListStyles from '../styles/FoodsList.module.css';
 import fetchFoods from '../apiRequests/getRequest';
 import FoodFilter from '../components/FoodFillter';
 import { foodFilterAction } from '../actions';
+import Food from '../components/Food';
 
 const FoodsList = props => {
   const { foods, fetchedFoods, filtered } = props;
@@ -24,27 +25,11 @@ const FoodsList = props => {
   return (
     <div className={FoodsListStyles.foods}>
       <FoodFilter handleFilter={handleFilterChange} foods={foods} />
-      {filteredBooks.map(food => (
-        <div
-          key={food.idMeal}
-          food={food}
-        >
-          <div className="row">
-            <div className="col-sm-12">{food.idMeal}</div>
-            <br />
-            <div className="col-sm-12">{food.strMeal}</div>
-            <br />
-            <div className="col-sm-12">{food.strCategory}</div>
-            <br />
-            <div className="col-sm-12">{food.strArea}</div>
-            <br />
-            {/* <div>{food.strInstructions}</div>
-            <br /> */}
-            <div className="col-sm-12"><img src={food.strMealThumb} alt="mealLogo" className="w-25" /></div>
-            <br />
-          </div>
-        </div>
-      ))}
+      <table style={{ width: '100%' }}>
+        {filteredBooks.map(food => (
+          <Food key={food.idMeal} food={food} />
+        ))}
+      </table>
     </div>
   );
 };
