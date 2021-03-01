@@ -1,14 +1,29 @@
-.img {
-  width: 25%;
+.foodDetails {
+  max-width: 416px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-.foodDetails {
-  /* display: flex; */
+.imgContainer {
+  min-height: 250px;
+  max-width: 416px;
+}
+
+.img {
+  width: 100%;
+  min-height: 100%;
+  border-radius: 20px;
 }
 
 .link {
-  color: rgb(36, 5, 5);
-  font-size: 18px;
+  color: white;
+  font-size: 20px;
   font-weight: bold;
   margin: '0 0 0 10px';
+  text-decoration: none;
+}
+
+.imgContainer:hover {
+  box-shadow: 0 20px 20px -6px rgb(49, 49, 49);
+  transform: scale(1) rotateZ(calc(5 * -2deg));
 }

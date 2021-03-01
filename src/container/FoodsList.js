@@ -19,14 +19,14 @@ const FoodsList = props => {
     fetchedFoods(foods);
   }, []);
 
-  const filteredBooks = foods.filter(food => (
+  const filteredFoods = foods.filter(food => (
     !!((filtered === null || filtered === food.strCategory))));
 
   return (
     <div className={FoodsListStyles.foods}>
       <FoodFilter handleFilter={handleFilterChange} foods={foods} />
-      <table style={{ width: '100%' }}>
-        {filteredBooks.map(food => (
+      <table className="d-flex flex-wrap">
+        {filteredFoods.map(food => (
           <Food key={food.idMeal} food={food} />
         ))}
       </table>

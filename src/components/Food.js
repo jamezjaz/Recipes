@@ -10,13 +10,15 @@ const Food = props => {
       <tr>
         <td>
           <div className={FoodStyles.foodDetails}>
-            <div>
+            <div className={FoodStyles.imgContainer}>
               <img src={food.strMealThumb} className={FoodStyles.img} alt="foodImg" />
-              <h4>{food.strMeal}</h4>
-              <Link className={FoodStyles.link} to="/foodDetails">
-                <span>Food Details</span>
-              </Link>
             </div>
+            <h4>{food.strMeal}</h4>
+            <button type="button" className="btn btn-secondary">
+              <Link className={FoodStyles.link} to="/foodDetails">
+                <h4>Food Details</h4>
+              </Link>
+            </button>
           </div>
         </td>
       </tr>
