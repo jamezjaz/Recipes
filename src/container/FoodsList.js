@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Loader from 'react-loader-spinner';
 import FoodsListStyles from '../styles/FoodsList.module.css';
 import fetchFoods from '../apiRequests/getRequest';
 import FoodFilter from '../components/FoodFillter';
@@ -15,7 +16,12 @@ const FoodsList = props => {
     filter(category);
   };
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
     fetchedFoods(foods);
   }, []);
 
@@ -25,11 +31,23 @@ const FoodsList = props => {
   return (
     <div className={FoodsListStyles.foods}>
       <FoodFilter handleFilter={handleFilterChange} foods={foods} />
-      <table className="d-flex flex-wrap">
-        {filteredFoods.map(food => (
-          <Food key={food.idMeal} food={food} />
-        ))}
-      </table>
+      {loading === true
+        ? (
+          <Loader
+            type="Puff"
+            color="#00BFFF"
+            height={150}
+            width={150}
+            timeout={3000} // 3 secs
+          />
+        )
+        : (
+          <table className="d-flex flex-wrap">
+            {filteredFoods.map(food => (
+              <Food key={food.idMeal} food={food} />
+            ))}
+          </table>
+        )}
     </div>
   );
 };

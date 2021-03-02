@@ -4,6 +4,8 @@ const initialState = {
   foods: {
     meals: [],
   },
+  loading: false,
+  error: '',
 };
 
 const foodReducer = (state = initialState, action) => {
