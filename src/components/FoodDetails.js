@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import 'node_modules/video-react/dist/video-react.css';
 import { Player } from 'video-react';
 
-const FoodDetails = props => {
-  const { foods } = props;
+const FoodDetails = ({ foods, match }) => {
+  // const { foods } = props;
+  const foodId = match.params.id;
   return (
     <div className="container-fluid">
       <h2>Food Details</h2>
       <div>
-        {foods.map(food => (
+        {foods.filter(food => food.idMeal === foodId).map(food => (
           <table className="table" key={food.idMeal} style={{ width: '100%' }}>
             <thead className="thead-dark">
               <tr>
@@ -58,6 +58,15 @@ FoodDetails.propTypes = {
     strArea: PropTypes.string,
     strInstructions: PropTypes.string,
   })).isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  }),
+};
+
+FoodDetails.defaultProps = {
+  match: {},
 };
 
 const mapStateToProps = state => ({

@@ -5,6 +5,7 @@ import FoodStyles from '../styles/FoodStyles.module.css';
 
 const Food = props => {
   const { food } = props;
+  const uniqueKey = food.idMeal;
   return (
     <tbody>
       <tr>
@@ -15,7 +16,7 @@ const Food = props => {
             </div>
             <h4>{food.strMeal}</h4>
             <button type="button" className="btn btn-secondary">
-              <Link className={FoodStyles.link} to="/foodDetails">
+              <Link className={FoodStyles.link} to={`/foodDetails/${uniqueKey}`}>
                 <h4>Food Details</h4>
               </Link>
             </button>
@@ -30,6 +31,7 @@ Food.propTypes = {
   food: PropTypes.shape({
     strMealThumb: PropTypes.string,
     strMeal: PropTypes.string,
+    idMeal: PropTypes.string,
   }).isRequired,
 };
 

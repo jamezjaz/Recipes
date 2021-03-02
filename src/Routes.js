@@ -10,7 +10,7 @@ const Routes = () => (
     <Nav />
     <Switch>
       <Route exact path="/" component={FoodsList} />
-      <Route path="/foodDetails" component={FoodDetails} />
+      <Route path="/foodDetails/:id" component={FoodDetails} />
       <Route component={Error} />
     </Switch>
   </Router>
