@@ -9,7 +9,9 @@ const Nav = () => (
       className="my-logo"
       style={{ color: 'white' }}
     >
-      <img src={logo} alt={logo} />
+      <Link to="/">
+        <img src={logo} alt={logo} />
+      </Link>
       Catalogue Of Recipes
     </h2>
     <ul className={NavStyles.navLinks}>
