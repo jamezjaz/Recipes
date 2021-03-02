@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Roboto+Slab&display=swap');
+
+.heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: 45px;
+  color: brown;
+  font-weight: bolder;
+}
+
+.foodDetails {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+}

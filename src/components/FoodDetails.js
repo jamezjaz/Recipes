@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Player } from 'video-react';
+import FoodDetailsStyles from '../styles/FoodDetails.module.css';
 
 const FoodDetails = ({ foods, match }) => {
   // const { foods } = props;
   const foodId = match.params.id;
   return (
     <div className="container-fluid">
-      <h2>Food Details</h2>
+      <h2 className={FoodDetailsStyles.heading}>Food Details</h2>
       <div>
         {foods.filter(food => food.idMeal === foodId).map(food => (
           <table className="table" key={food.idMeal} style={{ width: '100%' }}>
@@ -22,7 +23,7 @@ const FoodDetails = ({ foods, match }) => {
                 <th scope="col">Video</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className={FoodDetailsStyles.foodDetails}>
               <tr>
                 <th scope="row">{food.strMeal}</th>
                 <td>
