@@ -12,9 +12,9 @@ const Food = props => {
         <td>
           <div className={FoodStyles.foodDetails}>
             <div className={FoodStyles.imgContainer}>
-              <img src={food.strMealThumb} className={FoodStyles.img} alt="foodImg" />
+              <img src={food.strMealThumb} data-testid="image" className={FoodStyles.img} alt="foodImg" />
             </div>
-            <h4>{food.strMeal}</h4>
+            <h4 data-testid="name">{food.strMeal}</h4>
             <button type="button" className="btn btn-secondary">
               <Link className={FoodStyles.link} to={`/foodDetails/${uniqueKey}`}>
                 <h4>Food Details</h4>
