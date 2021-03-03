@@ -11,8 +11,6 @@ const fetchFoods = () => dispatch => {
     .then(response => {
       const foodRes = response.data;
       dispatch(foodRequestSuccess(foodRes));
-      console.log(response);
-      console.log(foodRes);
     })
     .catch(error => {
       const errorMsg = error.message;
