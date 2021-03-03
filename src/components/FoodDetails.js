@@ -5,7 +5,6 @@ import { Player } from 'video-react';
 import FoodDetailsStyles from '../styles/FoodDetails.module.css';
 
 const FoodDetails = ({ foods, match }) => {
-  // const { foods } = props;
   const foodId = match.params.id;
   return (
     <div className="container-fluid">
