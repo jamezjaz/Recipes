@@ -27,7 +27,7 @@ const FoodFilter = props => {
   return (
     <div>
       <label htmlFor="select" className="mx-auto my-0">
-        <select className={FoodFilterStyles.select} name="category" id="select" onChange={handleClick}>
+        <select className={FoodFilterStyles.select} name="category" id="select" data-testid="categories" onChange={handleClick}>
           <option disable="true" hidden>FOOD CATEGORIES</option>
           {categories.map(
             category => <option value={category} key={category}>{category}</option>,

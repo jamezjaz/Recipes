@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`<FoodFilter /> renders correctly 1`] = `
 <div>
   <label
     className="mx-auto my-0"
@@ -8,6 +8,7 @@ exports[`renders correctly 1`] = `
   >
     <select
       className="select"
+      data-testid="categories"
       id="select"
       name="category"
       onChange={[Function]}
