@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <label
+    className="mx-auto my-0"
+    htmlFor="select"
+  >
+    <select
+      className="select"
+      id="select"
+      name="category"
+      onChange={[Function]}
+    >
+      <option
+        disable="true"
+        hidden={true}
+      >
+        FOOD CATEGORIES
+      </option>
+      <option
+        value="All"
+      >
+        All
+      </option>
+      <option />
+    </select>
+  </label>
+</div>
+`;
