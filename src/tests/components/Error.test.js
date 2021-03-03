@@ -7,10 +7,10 @@ import Error from '../../components/Error';
 
 describe('<Error />', () => {
   it('renders correctly', () => {
-      const tree = renderer
-        .create(<Error />)
-        .toJSON();
-      expect(tree).toMatchSnapshot();
+    const tree = renderer
+      .create(<Error />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('contains a header text', () => {

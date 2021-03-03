@@ -11,8 +11,8 @@ Enzyme.configure({ adapter: new Adapter() });
 afterEach(cleanup);
 
 const foods = [
-  {id: 1, name: 'Food name', category: 'Starter'},
-  {id: 2, name: 'Food name', category: 'Starter'},
+  { id: 1, name: 'Food name', category: 'Starter' },
+  { id: 2, name: 'Food name', category: 'Starter' },
 ];
 
 describe('<FoodFilter />', () => {
@@ -24,7 +24,7 @@ describe('<FoodFilter />', () => {
   });
 
   it('it contains an option element', () => {
-    const wrapper = shallow(<FoodFilter handleFilter={() => 'mock'} key={foods.id} foods={foods} />)
+    const wrapper = shallow(<FoodFilter handleFilter={() => 'mock'} key={foods.id} foods={foods} />);
     const option = <option>FOOD CATEGORIES</option>;
     expect(wrapper.containsMatchingElement(option)).toBe(true);
   });

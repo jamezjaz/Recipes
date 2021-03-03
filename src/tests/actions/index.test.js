@@ -1,5 +1,9 @@
-import { foodFilterAction, foodRequest, foodRequestFailure, foodRequestSuccess } from '../../actions';
-import { CHANGE_FILTER, FETCH_FOODS_FAILURE, FETCH_FOODS_REQUEST, FETCH_FOODS_SUCCESS } from '../../actions/actionTypes';
+import {
+  foodFilterAction, foodRequest, foodRequestFailure, foodRequestSuccess,
+} from '../../actions';
+import {
+  CHANGE_FILTER, FETCH_FOODS_FAILURE, FETCH_FOODS_REQUEST, FETCH_FOODS_SUCCESS,
+} from '../../actions/actionTypes';
 
 describe('actions/foodRequest', () => {
   test('contains FETCH_FOODS_REQUEST variable', () => {

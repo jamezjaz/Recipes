@@ -1,6 +1,6 @@
 import React from 'react';
 import { cleanup, screen, render } from '@testing-library/react';
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -21,11 +21,11 @@ describe('<Nav />', () => {
     const tree = renderer
       .create(
         <Router>
-            <Nav />
+          <Nav />
         </Router>,
       )
       .toJSON();
-      expect(tree).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 
   test('contains Catalogue Of Recipes header', () => {
@@ -52,4 +52,3 @@ describe('<Nav />', () => {
     expect(wrapper.containsMatchingElement(link)).toBe(true);
   });
 });
-

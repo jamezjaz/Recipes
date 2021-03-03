@@ -7,25 +7,25 @@ import Food from '../../components/Food';
 describe('<Food />', () => {
   const food = {
     foods: {
-      meals: [{name: 'Chicken', category: 'Desert'},{name: 'Pizza', category: 'Starter'}]
-    }
-  }
-  
+      meals: [{ name: 'Chicken', category: 'Desert' }, { name: 'Pizza', category: 'Starter' }],
+    },
+  };
+
   it('it renders correctly', () => {
     const tree = renderer
-    .create(
-      <Router>
+      .create(
+        <Router>
           <Food food={food} />
-      </Router>,
-    )
+        </Router>,
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-  
+
   it('renders an image', () => {
     const { queryAllByTestId } = render(
       <Router>
-          <Food food={food} />
+        <Food food={food} />
       </Router>,
     );
     const image = queryAllByTestId('image');
@@ -35,7 +35,7 @@ describe('<Food />', () => {
   it('renders a name', () => {
     const { queryAllByTestId } = render(
       <Router>
-          <Food food={food} />
+        <Food food={food} />
       </Router>,
     );
     const name = queryAllByTestId('name');
@@ -45,7 +45,7 @@ describe('<Food />', () => {
   it('renders an image corecctly', () => {
     const { queryAllByTestId } = render(
       <Router>
-          <Food food={food} />
+        <Food food={food} />
       </Router>,
     );
     const image = queryAllByTestId('img');
@@ -55,7 +55,7 @@ describe('<Food />', () => {
   it('renders a name', () => {
     const { queryAllByTestId } = render(
       <Router>
-          <Food food={food} />
+        <Food food={food} />
       </Router>,
     );
     const name = queryAllByTestId('name');
