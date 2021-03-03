@@ -48,7 +48,7 @@ describe('<Nav />', () => {
   });
 
   test('it contains a Link', () => {
-    const link = <Link><li>About Us</li></Link>;
+    const link = <Link to="/about"><li>About Us</li></Link>;
     expect(wrapper.containsMatchingElement(link)).toBe(true);
   });
 });
