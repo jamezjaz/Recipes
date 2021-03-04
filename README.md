@@ -71,7 +71,7 @@ The application throws an error when a user inputs the wrong url on the browser.
 It's deployed [HERE](https://jaz-recipe.herokuapp.com/) on heroku
 
 ## Video Presentation
-[![Presentation](https://user-images.githubusercontent.com/57812000/109846436-cf5af680-7c13-11eb-988a-e7dba7b9f511.png)](https://www.loom.com/share/34ff206c899c4d90bb94bcd8188f7e08)
+[![Presentation](https://user-images.githubusercontent.com/57812000/109846436-cf5af680-7c13-11eb-988a-e7dba7b9f511.png)](https://www.youtube.com/watch?v=gnNMmkN40yw&feature=youtu.be)
 
 ### Built With
 This project was built using these technologies.
