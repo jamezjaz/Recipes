@@ -27,32 +27,18 @@ exports[`<Nav /> renders correctly 1`] = `
     className="navLinks"
   >
     <a
+      className="lists"
       href="/"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "white",
-          "fontSize": "20px",
-          "fontWeight": "bold",
-          "margin": "0 10px 0 0",
-        }
-      }
     >
       <li>
         Recipes
       </li>
     </a>
     <a
+      className="lists"
       href="/about"
       onClick={[Function]}
-      style={
-        Object {
-          "color": "white",
-          "fontSize": "20px",
-          "fontWeight": "bold",
-          "margin": "0 0 0 10px",
-        }
-      }
     >
       <li>
         About Us

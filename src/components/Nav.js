@@ -15,26 +15,10 @@ const Nav = () => (
       Catalogue Of Recipes
     </h2>
     <ul className={NavStyles.navLinks}>
-      <Link
-        style={{
-          color: 'white',
-          fontSize: '20px',
-          fontWeight: 'bold',
-          margin: '0 10px 0 0',
-        }}
-        to="/"
-      >
+      <Link className={NavStyles.lists} to="/">
         <li>Recipes</li>
       </Link>
-      <Link
-        style={{
-          color: 'white',
-          fontSize: '20px',
-          fontWeight: 'bold',
-          margin: '0 0 0 10px',
-        }}
-        to="/about"
-      >
+      <Link className={NavStyles.lists} to="/about">
         <li>About Us</li>
       </Link>
     </ul>
