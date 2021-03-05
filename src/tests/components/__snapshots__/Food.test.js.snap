@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Food /> it renders correctly 1`] = `
+<tbody>
+  <tr>
+    <td>
+      <div
+        className="foodDetails"
+      >
+        <div
+          className="imgContainer"
+        >
+          <img
+            alt="foodImg"
+            className="img"
+            data-testid="image"
+          />
+        </div>
+        <h4
+          data-testid="name"
+        />
+        <button
+          className="btn btn-secondary"
+          type="button"
+        >
+          <a
+            className="link"
+            href="/foodDetails/undefined"
+            onClick={[Function]}
+          >
+            <h4>
+              Food Details
+            </h4>
+          </a>
+        </button>
+      </div>
+    </td>
+  </tr>
+</tbody>
+`;

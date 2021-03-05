@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> renders correctly 1`] = `
+<nav
+  className="nav"
+>
+  <h2
+    className="my-logo"
+    style={
+      Object {
+        "color": "white",
+      }
+    }
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="logo.png"
+        src="logo.png"
+      />
+    </a>
+    Catalogue Of Recipes
+  </h2>
+  <ul
+    className="navLinks"
+  >
+    <a
+      className="lists"
+      href="/"
+      onClick={[Function]}
+    >
+      <li>
+        Recipes
+      </li>
+    </a>
+    <a
+      className="lists"
+      href="/about"
+      onClick={[Function]}
+    >
+      <li>
+        About Us
+      </li>
+    </a>
+  </ul>
+</nav>
+`;
